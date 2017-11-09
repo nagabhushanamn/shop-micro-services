@@ -22,5 +22,18 @@ node {
      }
      
      
+     stage('Docker Image') {
+     	dir(path){
+     	    def app = docker.build "localhost:5000/pc-service"
+            app.push()
+     	}
+     }
+     
+     stage ('Run Docker-container') {
+        sh 'docker stop $(docker ps -a -q)'
+        docker.image("localhost:5000/pc-service").run('-p 8081:8080')
+    }
+     
+     
     
 }
