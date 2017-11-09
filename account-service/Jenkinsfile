@@ -1,0 +1,26 @@
+
+
+
+node {
+    
+     def path='accounts-service'
+    
+     stage('Checkout') {
+         git url: 'https://github.com/nagabhushanamn/shop-micro-services.git',branch: 'master' 
+     }
+     
+     stage('Compile & Test') {
+     	dir(path){
+     		sh 'mvn test'
+     	}
+     }
+     
+     stage('Package') {
+     	dir(path){
+     		sh 'mvn package'
+     	}
+     }
+     
+     
+    
+}
