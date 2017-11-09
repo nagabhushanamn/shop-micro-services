@@ -23,7 +23,7 @@ public class ProductRepositoryTest {
 	@Test
 	public void priceTest() {
 		List<Product> list = productRepository.findByPrice(400.00);
-		assertEquals(2, list.size());
+		assertEquals(1, list.size());
 	}
 
 }
