@@ -8,9 +8,9 @@ import com.example.demo.config.Config;
 
 @SpringBootApplication
 @Import(value= {Config.class})
-public class ProductCatalogServiceApplication {
+public class AccountsServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductCatalogServiceApplication.class, args);
+		SpringApplication.run(AccountsServiceApplication.class, args);
 	}
 }

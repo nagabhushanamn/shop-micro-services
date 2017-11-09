@@ -1,10 +1,9 @@
 
-drop table PRODUCTS if exists;
+drop table ACCOUNTS if exists;
 
-create table PRODUCTS(
-	ID bigint identity primary key,
+create table ACCOUNTS(
+	USER_NAME varchar(100) primary key,
 	NAME varchar(100) NOT NULL,
-	PRICE decimal(8,2),
-	make_date date,
-	description varchar(256)
+	PASSWORD varchar(100) NOT NULL,
+	EMAIL varchar(100) NOT NULL,
 );
